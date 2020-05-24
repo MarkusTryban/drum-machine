@@ -1,13 +1,18 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-#drum-machine {
+body {
+  padding: 15px;
+  background-color: bisque;
+}
+
+.drums {
   padding: 15px;
   background-color: coral;
   margin: auto;
+  margin-top: 30px;
+  border-radius: 3px;
 }
 
 #display {
@@ -33,20 +38,14 @@
 
 .drum-pad {
   display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: calc(33.3333% - 0.5rem);
+  flex: 1 1 calc(33.3333% - 0.5rem);
   width: 33.3333%;
   margin: 0.25rem;
-  height: 50px;
-  width: 50%;
-  border: 1px solid #000;
-  border-radius: 3px;
-  color: #fff;
   background-color: #778899;
-  font-size: 1.35em;
-  padding: 10px 24px;
-  margin-top: 3px;
+  border-radius: 3px;
+  padding: 30px 0 30px 0;
+  text-align: center;
+  border: 1px solid #000;
   opacity: 1;
   cursor: pointer;
 }
