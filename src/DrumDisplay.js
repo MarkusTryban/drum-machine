@@ -10,7 +10,7 @@ class DrumDisplay extends Component {
 
   render() {
     return (
-      <div id='drum-machine'>
+      <div id='drum-machine' className='drums'>
         <div id='display'>
           <h1>Drum Machine</h1>
         </div>
