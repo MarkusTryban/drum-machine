@@ -11,17 +11,20 @@ class DrumDisplay extends Component {
   render() {
     return (
       <div id='drum-machine'>
-        <h1>Drum Machine</h1>
-        <button className='drum-pad'>Q</button>
-        <button className='drum-pad'>W</button>
-        <button className='drum-pad'>E</button>
-        <button className='drum-pad'>A</button>
-        <button className='drum-pad'>S</button>
-        <button className='drum-pad'>D</button>
-        <button className='drum-pad'>Z</button>
-        <button className='drum-pad'>X</button>
-        <button className='drum-pad'>C</button>
-        <div id='display'></div>
+        <div id='display'>
+          <h1>Drum Machine</h1>
+        </div>
+        <div className='drum-pad-layout'>
+          <button className='drum-pad'>Q</button>
+          <button className='drum-pad'>W</button>
+          <button className='drum-pad'>E</button>
+          <button className='drum-pad'>A</button>
+          <button className='drum-pad'>S</button>
+          <button className='drum-pad'>D</button>
+          <button className='drum-pad'>Z</button>
+          <button className='drum-pad'>X</button>
+          <button className='drum-pad'>C</button>
+        </div>
       </div>
     );
   }
