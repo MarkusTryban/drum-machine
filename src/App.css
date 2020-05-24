@@ -10,6 +10,18 @@
   margin: auto;
 }
 
+#display {
+  background-color: darkblue;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 20px 15px;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 30px;
+  border: 1px solid #000;
+}
+
 .drum-pad-layout {
   margin-top: 40px;
   width: 100%;
