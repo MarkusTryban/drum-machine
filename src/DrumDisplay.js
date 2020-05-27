@@ -25,6 +25,16 @@ class DrumDisplay extends Component {
           <button className='drum-pad'>X</button>
           <button className='drum-pad'>C</button>
         </div>
+        <div className='footer'>
+          by{' '}
+          <a
+            href='https://markustryban.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Markus Tryban
+          </a>
+        </div>
       </div>
     );
   }
