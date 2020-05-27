@@ -4,6 +4,7 @@
 
 body {
   display: flex;
+  justify-content: center;
   padding: 15px;
   background-color: bisque;
 }
