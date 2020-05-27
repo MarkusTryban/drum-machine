@@ -51,6 +51,12 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 576px) {
+  .drums {
+    max-width: 385px;
+  }
+}
+
 .footer {
   text-align: center;
   margin-top: 15px;
