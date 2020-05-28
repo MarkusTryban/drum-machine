@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
+import drumPadClip from './DrumPadClip';
+
 class DrumDisplay extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: '',
+      audioData: [],
     };
+    this.GET_AUDIO_CLIP = drumPadClip();
   }
 
   render() {
