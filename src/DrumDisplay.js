@@ -11,6 +11,16 @@ class DrumDisplay extends Component {
     this.GET_AUDIO_CLIP = drumPadClip();
   }
 
+  getAudio = () => {
+    fetch(this.GET_AUDIO_CLIP)
+      .then(res => res.json())
+      .then(result => {
+        this.setState({
+          audioData: result,
+        });
+      });
+  };
+
   render() {
     return (
       <div id='drum-machine' className='drums'>
