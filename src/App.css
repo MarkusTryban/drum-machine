@@ -69,3 +69,7 @@ body {
   text-decoration: none;
   color: #fff;
 }
+
+.footer a:hover {
+  color: #000;
+}
