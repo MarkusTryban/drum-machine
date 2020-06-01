@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import drumPadClip from './DrumPadClip';
 
-class DrumDisplay extends Component {
+export default class DrumDisplay extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,5 +52,3 @@ class DrumDisplay extends Component {
     );
   }
 }
-
-export default DrumDisplay;
