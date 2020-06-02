@@ -1,4 +1,4 @@
-const drumPadClip = () => {
+export const drumPadObj = () => {
   return [
     {
       keyCode: 81,
@@ -56,5 +56,3 @@ const drumPadClip = () => {
     },
   ];
 };
-
-export default drumPadClip;

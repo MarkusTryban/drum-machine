@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import drumPadClip from './DrumPadClip';
+import { drumPadObj } from './DrumPadObj';
 import DrumPad from './DrumPad';
 
-const bankOne = drumPadClip();
+const bankOne = drumPadObj();
 
 export default class DrumDisplay extends Component {
   constructor(props) {
