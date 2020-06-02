@@ -64,7 +64,7 @@ export default class DrumDisplay extends Component {
     super(props);
 
     this.state = {
-      displayText: this.props.displayTextDefault,
+      displayText: 'Drum Machine',
     };
 
     this.updateDisplayText = this.updateDisplayText.bind(this);
