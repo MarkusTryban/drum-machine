@@ -5,11 +5,10 @@ export default class DrumPad extends Component {
     super(props);
 
     this.audioHandler = React.createRef();
-    this.drumPadOnClick = this.drumPadOnClick.bind(this);
   }
 
   drumPadOnClick = () => {
-    const text = this.props.padItem.id.replace(/-/g, ' ');
+    const text = this.props.padItem.id;
     const audioElm = this.audioHandler.current;
 
     this.props.updateDisplayText(text);
