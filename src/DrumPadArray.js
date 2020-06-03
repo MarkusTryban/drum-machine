@@ -1,4 +1,4 @@
-export const drumPadObj = () => {
+export const drumPadArray = () => {
   return [
     {
       keyCode: 81,

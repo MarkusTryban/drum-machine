@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import { drumPadObj } from './DrumPadObj';
+import { drumPadArray } from './DrumPadArray';
 import DrumPad from './DrumPad';
 
-const bankOne = drumPadObj();
+const bankOne = drumPadArray();
 
 export default class DrumDisplay extends Component {
   constructor(props) {
