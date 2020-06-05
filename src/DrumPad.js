@@ -32,12 +32,7 @@ export default class DrumPad extends Component {
     const padItem = this.props.padItem;
 
     return (
-      <div
-        data-key={padItem.keyCode}
-        className='drum-pad'
-        id={padItem.id}
-        onClick={this.drumPadOnClick}
-      >
+      <div className='drum-pad' id={padItem.id} onClick={this.drumPadOnClick}>
         <audio
           className='clip'
           id={padItem.keyTrigger}
