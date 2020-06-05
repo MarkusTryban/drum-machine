@@ -18,6 +18,16 @@ export default class DrumPad extends Component {
     }
   };
 
+  onKeyUp = e => {
+    const root = ReactDOM.findDOMNode(this);
+
+    if (e.keyCode === this.props.padItem.keyCode) {
+      setTimeout(() => {
+        root.classList.remove('active');
+      }, 33);
+    }
+  };
+
   drumPadOnClick = () => {
     const text = this.props.padItem.id;
     const audioElm = this.audioHandler.current;
@@ -28,6 +38,7 @@ export default class DrumPad extends Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyDown);
+    document.addEventListener('keydown', this.onKeyup);
   }
 
   render() {
