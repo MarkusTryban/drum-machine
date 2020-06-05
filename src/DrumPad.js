@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 export default class DrumPad extends Component {
   constructor(props) {
@@ -8,12 +9,13 @@ export default class DrumPad extends Component {
   }
 
   onKeyDown = e => {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const drum = document.querySelector(`.drum-pad[data-key="${e.keyCode}"]`);
+    const root = ReactDOM.findDOMNode(this);
 
-    if (!audio) return;
+    if (e.keycode === this.props.padItem.keyCode) {
+      root.classList.add('active');
 
-    this.drumPadOnClick();
+      this.drumPadOnClick();
+    }
   };
 
   drumPadOnClick = () => {
