@@ -6,6 +6,9 @@ export default class DrumPad extends Component {
     super(props);
 
     this.audioHandler = React.createRef();
+    this.drumPadOnClick = this.drumPadOnClick.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
+    this.onKeyUp = this.onKeyUp.bind(this);
   }
 
   onKeyDown = e => {
@@ -38,7 +41,7 @@ export default class DrumPad extends Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyDown);
-    document.addEventListener('keydown', this.onKeyup);
+    document.addEventListener('keydown', this.onKeyUp);
   }
 
   componentWillUnmount() {
