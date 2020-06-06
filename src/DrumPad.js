@@ -41,12 +41,12 @@ export default class DrumPad extends Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyDown);
-    document.addEventListener('keydown', this.onKeyUp);
+    document.addEventListener('keyup', this.onKeyUp);
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.onKeyDown);
-    document.removeEventListener('keydown', this.onKeyUp);
+    document.removeEventListener('keyup', this.onKeyUp);
   }
 
   render() {
