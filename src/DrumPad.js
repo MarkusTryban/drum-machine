@@ -14,7 +14,7 @@ export default class DrumPad extends Component {
   onKeyDown = e => {
     const root = ReactDOM.findDOMNode(this);
 
-    if (e.keycode === this.props.padItem.keyCode) {
+    if (e.keyCode === this.props.padItem.keyCode) {
       root.classList.add('active');
 
       this.drumPadOnClick();
