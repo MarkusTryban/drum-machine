@@ -36,6 +36,7 @@ export default class DrumPad extends Component {
     const audioElm = this.audioHandler.current;
 
     this.props.updateDisplayText(text);
+    audioElm.currentTime = 0;
     audioElm.play();
   };
 
