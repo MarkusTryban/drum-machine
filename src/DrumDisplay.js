@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
 import { drumPadArray } from './DrumPadArray';
+
 import DrumPad from './DrumPad';
+
+import './DrumDisplay.css';
 
 const bankOne = drumPadArray();
 
@@ -16,7 +19,7 @@ export default class DrumDisplay extends Component {
     this.updateDisplayText = this.updateDisplayText.bind(this);
   }
 
-  updateDisplayText = text => {
+  updateDisplayText = (text) => {
     this.setState({
       displayText: text,
     });
