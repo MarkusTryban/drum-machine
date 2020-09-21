@@ -11,7 +11,7 @@ export default class DrumPad extends Component {
     this.onKeyUp = this.onKeyUp.bind(this);
   }
 
-  onKeyDown = e => {
+  onKeyDown = (e) => {
     const root = ReactDOM.findDOMNode(this);
 
     if (e.keyCode === this.props.padItem.keyCode) {
@@ -21,7 +21,7 @@ export default class DrumPad extends Component {
     }
   };
 
-  onKeyUp = e => {
+  onKeyUp = (e) => {
     const root = ReactDOM.findDOMNode(this);
 
     if (e.keyCode === this.props.padItem.keyCode) {
