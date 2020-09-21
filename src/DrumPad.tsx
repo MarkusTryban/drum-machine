@@ -1,68 +1,61 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
+
 import ReactDOM from 'react-dom';
 
-export default class DrumPad extends Component {
-  constructor(props) {
-    super(props);
+const DrumPad = (props) => {
+  const audioHandler = React.createRef();
 
-    this.audioHandler = React.createRef();
-    this.drumPadOnClick = this.drumPadOnClick.bind(this);
-    this.onKeyDown = this.onKeyDown.bind(this);
-    this.onKeyUp = this.onKeyUp.bind(this);
-  }
-
-  onKeyDown = (e) => {
+  const onKeyDown = (e) => {
     const root = ReactDOM.findDOMNode(this);
 
-    if (e.keyCode === this.props.padItem.keyCode) {
+    if (e.keyCode === props.padItem.keyCode) {
       root.classList.add('active');
 
-      this.drumPadOnClick();
+      drumPadOnClick();
     }
   };
 
-  onKeyUp = (e) => {
+  const onKeyUp = (e) => {
     const root = ReactDOM.findDOMNode(this);
 
-    if (e.keyCode === this.props.padItem.keyCode) {
+    if (e.keyCode === props.padItem.keyCode) {
       setTimeout(() => {
         root.classList.remove('active');
       }, 33);
     }
   };
 
-  drumPadOnClick = () => {
-    const text = this.props.padItem.id;
-    const audioElm = this.audioHandler.current;
+  const drumPadOnClick = () => {
+    const text = props.padItem.id;
+    const audioElm = audioHandler.current;
 
-    this.props.updateDisplayText(text);
+    props.updateDisplayText(text);
     audioElm.currentTime = 0;
     audioElm.play();
   };
 
-  componentDidMount() {
-    document.addEventListener('keydown', this.onKeyDown);
-    document.addEventListener('keyup', this.onKeyUp);
-  }
+  useEffect(() => {
+    document.addEventListener('keydown', onKeyDown);
+    document.addEventListener('keyup', onKeyUp);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.removeEventListener('keyup', onKeyUp);
+    };
+  }, []);
 
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.onKeyDown);
-    document.removeEventListener('keyup', this.onKeyUp);
-  }
+  const { padItem } = props.padItem;
 
-  render() {
-    const padItem = this.props.padItem;
+  return (
+    <div className='drum-pad' id={padItem.id} onClick={drumPadOnClick}>
+      <audio
+        className='clip'
+        id={padItem.keyTrigger}
+        src={padItem.url}
+        ref={audioHandler}
+      />
+      {padItem.keyTrigger}
+    </div>
+  );
+};
 
-    return (
-      <div className='drum-pad' id={padItem.id} onClick={this.drumPadOnClick}>
-        <audio
-          className='clip'
-          id={padItem.keyTrigger}
-          src={padItem.url}
-          ref={this.audioHandler}
-        />
-        {padItem.keyTrigger}
-      </div>
-    );
-  }
-}
+export default DrumPad;
