@@ -19,6 +19,7 @@ body {
 }
 
 .drums {
+  min-width: 385px;
   padding: 15px;
   background-color: #9acd32;
   margin: auto;
@@ -61,12 +62,6 @@ body {
   border: 1px solid #000;
   opacity: 1;
   cursor: pointer;
-}
-
-@media (min-width: 576px) {
-  .drums {
-    max-width: 385px;
-  }
 }
 
 .footer {
