@@ -1,6 +1,6 @@
 {
-  "extends": ["prettier", "prettier/react"],
-  "plugins": ["prettier"],
+  "extends": ["airbnb-typescript-prettier"],
+  "plugins": ["prettier", "jest"],
   "rules": {
     "prettier/prettier": [
       "error",
