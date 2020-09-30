@@ -8,7 +8,7 @@ import './DrumDisplay.css';
 
 const bankOne = drumPadArray();
 
-const DrumDisplay = () => {
+const DrumDisplay = (): JSX.Element => {
   const [displayText, setDisplayText] = useState('Drum Machine');
 
   const updateDisplayText = (text: string): void => {
