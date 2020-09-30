@@ -11,7 +11,7 @@ const bankOne = drumPadArray();
 const DrumDisplay = () => {
   const [displayText, setDisplayText] = useState('Drum Machine');
 
-  const updateDisplayText = (text: string) => {
+  const updateDisplayText = (text: string): void => {
     setDisplayText(text);
   };
 
