@@ -23,10 +23,10 @@ const DrumDisplay = (): JSX.Element => {
             <h1>{displayText}</h1>
           </div>
           <div className='drum-pad-layout'>
-            {bankOne.map((item, idx) => {
+            {bankOne.map((item) => {
               return (
                 <DrumPad
-                  key={idx}
+                  key={item.id}
                   padItem={item}
                   updateDisplayText={updateDisplayText}
                 />
