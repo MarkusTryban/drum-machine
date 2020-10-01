@@ -1,4 +1,9 @@
-export const drumPadArray = () => {
+const drumPadArray = (): {
+  keyCode: number;
+  keyTrigger: string;
+  id: string;
+  url: string;
+}[] => {
   return [
     {
       keyCode: 81,
@@ -56,3 +61,5 @@ export const drumPadArray = () => {
     },
   ];
 };
+
+export default drumPadArray;
