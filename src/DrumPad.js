@@ -11,6 +11,16 @@ export default class DrumPad extends Component {
     this.onKeyUp = this.onKeyUp.bind(this);
   }
 
+  componentDidMount() {
+    document.addEventListener('keydown', this.onKeyDown);
+    document.addEventListener('keyup', this.onKeyUp);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKeyDown);
+    document.removeEventListener('keyup', this.onKeyUp);
+  }
+
   onKeyDown = (e) => {
     const root = ReactDOM.findDOMNode(this);
 
@@ -39,16 +49,6 @@ export default class DrumPad extends Component {
     audioElm.currentTime = 0;
     audioElm.play();
   };
-
-  componentDidMount() {
-    document.addEventListener('keydown', this.onKeyDown);
-    document.addEventListener('keyup', this.onKeyUp);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.onKeyDown);
-    document.removeEventListener('keyup', this.onKeyUp);
-  }
 
   render() {
     const padItem = this.props.padItem;
